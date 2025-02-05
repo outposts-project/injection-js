@@ -1,23 +1,27 @@
-[![Build Status](https://travis-ci.org/mgechev/injection-js.svg?branch=master)](https://travis-ci.org/mgechev/injection-js) ![Downloads](https://img.shields.io/npm/dm/injection-js.svg)
+# @outposts/injection-js
 
-# Dependency Injection
+**A fork of `injection-js` to release new versions that contain all new features in the latest 4 years features since v2.4.0**
+
+Go [Original Project](https://github.com/mgechev/injection-js)
+
+## Dependency Injection
 
 Dependency injection library for JavaScript and TypeScript in **5.2K**. It is an extraction of the Angular's dependency injection which means that it's feature complete, fast, reliable and well tested.
 
-# Why not Angular version 5 and above?
+## Why not Angular version 5 and above?
 
 Angular version 5 deprecated the `ReflectiveInjector` API and introduced `StaticInjector`. In short, the dependency injection in the newest versions of Angular will happen entirely compile-time so reflection will not be necessary.
 
 However, if you want to use dependency injection in your Node.js, Vue, React, Vanilla JS, TypeScript, etc. application you won't be able to take advantage of `StaticInjector` the way that Angular will because your application won't be compatible with Angular compiler.
 
-This means that **if you need dependency injection outside of Angular `@angular/core` is not an option. In such case, use `injection-js` for fast, small, reliable, high-quality, well designed and well tested solution.**
+This means that **if you need dependency injection outside of Angular `@angular/core` is not an option. In such case, use `@outposts/injection-js` for fast, small, reliable, high-quality, well designed and well tested solution.**
 
-# How to use?
+## How to use?
 
 ```sh
-$ npm i injection-js
+$ npm i @outposts/injection-js
 # OR
-$ yarn add injection-js
+$ yarn add @outposts/injection-js
 ```
 
 > **Note:**
@@ -31,11 +35,11 @@ $ yarn add injection-js
 >
 > Also for TypeScript you will need to enable `experimentalDecorators` and `emitDecoratorMetadata` flags within your `tsconfig.json`
 
-## TypeScript
+### TypeScript
 
 ```ts
 import 'reflect-metadata';
-import { ReflectiveInjector, Injectable, Injector } from 'injection-js';
+import { ReflectiveInjector, Injectable, Injector } from '@outposts/injection-js';
 
 class Http {}
 
@@ -62,10 +66,10 @@ const injector = ReflectiveInjector.resolveAndCreate([Service, Http]);
 console.log(injector.get(Service) instanceof Service);
 ```
 
-## ES6
+### ES6
 
 ```js
-const { Inject, ReflectiveInjector } = require('injection-js');
+const { Inject, ReflectiveInjector } = require('@outposts/injection-js');
 
 class Http {}
 
@@ -84,11 +88,11 @@ const injector = ReflectiveInjector.resolveAndCreate([Http, Service]);
 console.log(injector.get(Service) instanceof Service);
 ```
 
-## ES5
+### ES5
 
 ```js
 require('reflect-metadata');
-var di = require('injection-js');
+var di = require('@outposts/injection-js');
 
 var Http = di.Class({
   constructor: function() {},
@@ -108,7 +112,7 @@ var injector = di.ReflectiveInjector.resolveAndCreate([Http, Service]);
 console.log(injector.get(Service) instanceof Service);
 ```
 
-# API
+## API
 
 For full documentation check Angular DI docs:
 
@@ -116,11 +120,11 @@ For full documentation check Angular DI docs:
 - [Dependency Injection in action](https://v4.angular.io/guide/dependency-injection-in-action)
 - [Dependency Injection without Typescript](https://v2.angular.io/docs/ts/latest/cookbook/ts-to-js.html#!#dependency-injection)
 
-# Ecosystem
+## Ecosystem
 
 This is a list of libraries that are using injection-js. If you have a suggestion on what to add, please don't hesitate to submit a PR.
 
-## Libraries
+### Libraries
 
 - [ng-packagr](https://github.com/ng-packagr/ng-packagr) Transpile your libraries to Angular Package Format. Part of the official Angular CLI.
 - [@martin_hotell/axios-http](https://github.com/Hotell/axios-http) Injectable axios HttpClient wrapper for browser and node
@@ -128,6 +132,6 @@ This is a list of libraries that are using injection-js. If you have a suggestio
 - [rxstack](https://github.com/rxstack/rxstack) RxStack is a realtime object-oriented framework which helps you build a micro service web applications on top of other frameworks like express and socketio by adding an abstraction layer.
 - [ServeRX-ts](https://github.com/mflorence99/serverx-ts) Experimental [Node.js](https://nodejs.org) HTTP framework using [RxJS](https://rxjs.dev), built with [TypeScript](https://www.typescriptlang.org/) and optimized for serverless deployments. Features declarative routes and dependency injection powered by injection-js.
 
-# License
+## License
 
 MIT

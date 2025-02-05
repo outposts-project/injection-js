@@ -1,6 +1,6 @@
 {
-  "name": "injection-js",
-  "version": "2.4.0",
+  "name": "@outposts/injection-js",
+  "version": "2.5.0",
   "description": "Dependency Injection library for JavaScript and TypeScript",
   "main": "injection.bundle.js",
   "module": "index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mgechev/injection-js.git"
+    "url": "git+https://github.com/outposts-project/injection-js.git"
   },
   "dependencies": {
     "tslib": "^2.0.0"

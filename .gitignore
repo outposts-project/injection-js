@@ -34,3 +34,5 @@ demo/dist
 demo/vendor
 .idea
 dist-test
+.yarnrc.yml
+.yarn
